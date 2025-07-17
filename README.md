@@ -1,55 +1,73 @@
-==============================
-   MAC/IP CHANGER TOOL
-        MADE BY ELITEHACKER
-==============================
+# 🚀 MAC & IP Changer Tool
+**A powerful Python script to spoof or reset MAC and IP addresses on Linux systems**
 
-This tool allows you to:
-✅ Change the MAC address of a selected network interface
-✅ Request a new IP address via DHCP (dhclient)
+## 📋 Table of Contents
+- [Features](#-features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Examples](#-examples)
+- [Troubleshooting](#-troubleshooting)
+- [Disclaimer](#-disclaimer)
+- [License](#-license)
 
----------------
- Requirements:
----------------
-- Python 3
-- Linux OS
-- `ifconfig` and `dhclient` must be installed
-- Root access (run with sudo)
+---
 
-----------------------
- How to Use the Tool:
-----------------------
+## ✨ Features
 
-1. Open your terminal.
+### MAC Address Spoofing
+✅ Generate random MAC addresses  
+✅ Vendor-specific MACs (Cisco/Apple/Samsung)  
+✅ Store original MAC for easy reset  
+✅ Visual verification of changes  
 
-2. Make the script executable:
-   chmod +x elite_mac_ip_changer.py
+### IP Address Management
+✅ Release current IP  
+✅ Request new DHCP lease  
+✅ Automatic IP renewal after MAC change  
 
-3. Run the script as root:
-   sudo ./elite_mac_ip_changer.py
+### Reset Functionality
+🔙 Restore original MAC address  
+🔄 Renew IP address  
+📋 View before/after network configurations  
 
-4. The script will:
-   - Show all available interfaces
-   - Ask which one you want to change
-   - Generate and assign a new random MAC
-   - Request a new IP using dhclient
+### Extras
+🎨 Color-coded terminal interface  
+📝 Automatic operation logging  
+🛡️ Root permission verification  
 
----------------------
- Sample Output:
----------------------
-Available Interfaces:
-1. wlan0
-2. eth0
+---
 
-Select interface number to spoof MAC: 1
+## 📥 Installation
 
-[*] Changing MAC address of wlan0 to 02:6A:91:3F:44:2D
-[*] Releasing and requesting new IP...
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/mac-ip-changer.git
+   cd mac-ip-changer
+   chmod +x mac_ip_changer.py
+   sudo ./mac_ip_changer.py
 
-[+] Interface      : wlan0
-[+] New MAC Address: 02:6A:91:3F:44:2D
-[+] New IP Address : 192.168.1.115
+   ⚠️ Troubleshooting
+Issue	Solution
+"No network interfaces found"	Check if ifconfig is installed (sudo apt install net-tools)
+MAC change doesn't persist	Disable NetworkManager: sudo systemctl stop NetworkManager
+Script won't run	Ensure Python 3 is installed (python3 --version)
+Permission denied	Always run with sudo
 
--------------------------
-  Author: ELITEHACKER 😎
--------------------------
+🔐 Important Notes
+❗ Legal Disclaimer
+This tool is for:
 
+Educational purposes
+
+Privacy protection
+
+Security research
+
+Never use this tool on networks without explicit permission.
+
+📜 License
+MIT License - See LICENSE file for details
+
+👨💻 Author
+ELITEHACKER
+"With great power comes great responsibility"
