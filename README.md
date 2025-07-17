@@ -46,7 +46,10 @@
    chmod +x mac_ip_changer.py
    sudo ./mac_ip_changer.py
 
-   ⚠️ Troubleshooting
+
+
+⚠️ Troubleshooting
+
 Issue	Solution
 "No network interfaces found"	Check if ifconfig is installed (sudo apt install net-tools)
 MAC change doesn't persist	Disable NetworkManager: sudo systemctl stop NetworkManager
